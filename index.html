@@ -2,65 +2,187 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio de Nicolás Corral</title>
+  <title>Nicolás Corral | Analista & Científico de Datos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f8f8f8;
-      color: #333;
+      background: #f4f7fa;
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 40px 32px;
     }
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #1976d2;
+      margin-bottom: 12px;
     }
     h1 {
+      margin: 0 0 10px;
+      font-size: 2.4em;
       color: #1976d2;
     }
-    section {
-      background: #fff;
-      border-radius: 8px;
-      padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    .subtitle {
+      color: #4a4a4a;
+      margin-bottom: 16px;
+      font-size: 1.2em;
     }
-    a {
+    .bio {
+      margin: 24px 0 32px 0;
+      font-size: 1.1em;
+      color: #3d3d3d;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+      justify-content: center;
+    }
+    .skill {
+      background: #e3eafc;
+      color: #1976d2;
+      padding: 7px 18px;
+      border-radius: 16px;
+      font-size: 1em;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .projects {
+      margin-bottom: 32px;
+    }
+    .projects h2 {
+      color: #1976d2;
+      margin-bottom: 18px;
+    }
+    .project-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .project-list li {
+      background: #f7faff;
+      border-left: 5px solid #1976d2;
+      margin-bottom: 18px;
+      padding: 18px 24px;
+      border-radius: 10px;
+      transition: box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(25,118,210,0.06);
+    }
+    .project-list li:hover {
+      box-shadow: 0 4px 16px rgba(25,118,210,0.10);
+    }
+    .project-title {
+      font-size: 1.15em;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .project-desc {
+      color: #444;
+      margin-bottom: 6px;
+    }
+    .project-links a {
       color: #1976d2;
       text-decoration: none;
+      font-size: 1.1em;
+      margin-right: 12px;
     }
-    a:hover {
-      text-decoration: underline;
+    .contact {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .contact a {
+      color: #222;
+      font-size: 1.7em;
+      margin: 0 10px;
+      transition: color 0.2s;
+    }
+    .contact a:hover {
+      color: #1976d2;
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 20px 5vw;
+      }
+      .bio, .projects, .skills {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Nicolás Corral</h1>
-    <p>Desarrollador | Portafolio personal</p>
-  </header>
-  <section>
-    <h2>Sobre mí</h2>
-    <p>
-      Soy desarrollador web con experiencia en HTML, CSS, JavaScript y más. ¡Bienvenido a mi portafolio!
-    </p>
-  </section>
-  <section>
-    <h2>Proyectos Destacados</h2>
-    <ul>
-      <li>
-        <strong>Proyecto 1:</strong> <a href="#">Descripción breve del proyecto 1</a>
-      </li>
-      <li>
-        <strong>Proyecto 2:</strong> <a href="#">Descripción breve del proyecto 2</a>
-      </li>
-      <!-- Agrega más proyectos aquí -->
-    </ul>
-  </section>
-  <section>
-    <h2>Contacto</h2>
-    <p>Puedes contactarme a través de mi correo: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
-    <p>O visita mi <a href="https://github.com/CorralNicolas" target="_blank">GitHub</a></p>
-  </section>
+  <div class="container">
+    <header>
+      <!-- Cambia el src de la imagen por tu foto de perfil -->
+      <img src="https://avatars.githubusercontent.com/u/139377443?v=4" class="avatar" alt="Nicolás Corral avatar">
+      <h1>Nicolás Corral</h1>
+      <div class="subtitle">Analista de Datos | Científico de Datos</div>
+    </header>
+    <div class="bio">
+      Apasionado por descubrir insights en los datos y transformarlos en soluciones accionables.<br>
+      Experiencia en análisis de datos, machine learning y visualización.<br>
+      Siempre aprendiendo nuevas herramientas y técnicas para mejorar la toma de decisiones.
+    </div>
+    <div class="skills">
+      <span class="skill"><i class="fa-brands fa-python"></i> Python</span>
+      <span class="skill"><i class="fa-solid fa-database"></i> SQL</span>
+      <span class="skill"><i class="fa-brands fa-r-project"></i> R</span>
+      <span class="skill"><i class="fa-solid fa-chart-line"></i> Power BI</span>
+      <span class="skill"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+      <span class="skill"><i class="fa-solid fa-chart-pie"></i> Visualización</span>
+      <!-- Agrega más skills si quieres -->
+    </div>
+    <div class="projects">
+      <h2>Proyectos Destacados</h2>
+      <ul class="project-list">
+        <li>
+          <div class="project-title">Análisis de Ventas Minoristas</div>
+          <div class="project-desc">Dashboard interactivo para visualizar y analizar datos de ventas utilizando Python y Power BI.</div>
+          <div class="project-links">
+            <a href="https://github.com/CorralNicolas/ventas-minoristas" target="_blank"><i class="fa-brands fa-github"></i> Ver en GitHub</a>
+          </div>
+        </li>
+        <li>
+          <div class="project-title">Modelo de Predicción de Churn</div>
+          <div class="project-desc">Modelo de machine learning para predecir la pérdida de clientes en empresas de telecomunicaciones.</div>
+          <div class="project-links">
+            <a href="https://github.com/CorralNicolas/churn-prediction" target="_blank"><i class="fa-brands fa-github"></i> Ver en GitHub</a>
+          </div>
+        </li>
+        <li>
+          <div class="project-title">Visualización de Datos </div>
+          <div class="project-desc">Herramienta web para analizar tendencias climáticas usando datos históricos.</div>
+          <div class="project-links">
+            <a href="https://github.com/CorralNicolas/clima-visual" target="_blank"><i class="fa-brands fa-github"></i> Ver en GitHub</a>
+          </div>
+        </li>
+        <!-- Agrega más proyectos aquí -->
+      </ul>
+    </div>
+    <div class="contact">
+      <a href="mailto:n.corral.j@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/CorralNicolas" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/nicolas-corral-281209212/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <!-- Agrega más redes si quieres -->
+    </div>
+  </div>
 </body>
 </html>
