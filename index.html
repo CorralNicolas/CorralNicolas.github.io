@@ -29,22 +29,42 @@
       border-left: 4px solid #9333ea;
       padding-left: 0.75rem;
     }
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 6px 12px;
+      border: 1px solid #9333ea;
+      border-radius: 6px;
+      background: transparent;
+      color: #c084fc;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-btn:hover {
+      background: #9333ea;
+      color: white;
+    }
   </style>
 </head>
 <body class="font-sans">
+
+  <!-- Botón idioma -->
+  <button id="langToggle" class="lang-btn">English</button>
+
   <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
     <!-- Presentación -->
     <section class="flex flex-col md:flex-row items-center gap-8">
       <img src="nicolas.png" alt="Nicolás Corral" class="w-40 h-40 rounded-full object-cover border-4 border-violet-600">
       <div>
-        <h1 class="text-3xl font-bold">Nicolás Corral</h1>
-        <p class="text-violet-400 mt-2">
+        <h1 id="nameTitle" class="text-3xl font-bold">Nicolás Corral</h1>
+        <p id="subtitle" class="text-violet-400 mt-2">
           Data Analyst <span class="highlight">|</span> Data Scientist <span class="highlight">|</span> Python 
           <span class="highlight">|</span> Power BI <span class="highlight">|</span> AI <span class="highlight">|</span> SQL 
           <span class="highlight">|</span> Automatización
         </p>
         <div class="mt-4">
-          <a href="CvNicolasCorral.pdf" download class="inline-block px-4 py-2 border border-violet-500 rounded hover:bg-violet-600 hover:text-white transition">Descargar CV</a>
+          <a id="cvLink" href="CvNicolasCorral.pdf" download class="inline-block px-4 py-2 border border-violet-500 rounded hover:bg-violet-600 hover:text-white transition">Descargar CV</a>
         </div>
       </div>
     </section>
@@ -53,31 +73,31 @@
 
     <!-- Proyectos -->
     <section>
-      <h2 class="text-2xl font-semibold mb-6 section-header">Proyectos destacados</h2>
+      <h2 id="projectsTitle" class="text-2xl font-semibold mb-6 section-header">Proyectos destacados</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <!-- Proyecto 1 -->
         <div class="card bg-[#1a1a2e] p-6 rounded-xl border border-violet-700">
-          <h3 class="text-xl font-bold text-violet-300">Automatización de Facturas</h3>
-          <p class="mt-2 text-slate-300">Automatización de procesos con Power Automate, generación de PDFs, carga en carpetas y envío por correo.</p>
-          <p class="mt-2 text-sm text-slate-400">Tecnologías: Power Automate, Python, Outlook, Excel</p>
-          <a href="https://github.com/CorralNicolas/Data-Scientist-Project--Automatizacion-De-Facturas" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
+          <h3 id="proj1Title" class="text-xl font-bold text-violet-300">Automatización de Facturas</h3>
+          <p id="proj1Desc" class="mt-2 text-slate-300">Automatización de procesos con Power Automate, generación de PDFs, carga en carpetas y envío por correo.</p>
+          <p id="proj1Tech" class="mt-2 text-sm text-slate-400">Tecnologías: Power Automate, Python, Outlook, Excel</p>
+          <a id="proj1Link" href="https://github.com/CorralNicolas/Data-Scientist-Project--Automatizacion-De-Facturas" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
         </div>
 
         <!-- Proyecto 2 -->
         <div class="card bg-[#1a1a2e] p-6 rounded-xl border border-violet-700">
-          <h3 class="text-xl font-bold text-violet-300">Análisis de Universidades</h3>
-          <p class="mt-2 text-slate-300">Uso de SQL y Power BI para análisis exploratorio y visualización interactiva de datos de universidades.</p>
-          <p class="mt-2 text-sm text-slate-400">Tecnologías: SQL, Power BI, ETL, DAX</p>
-          <a href="https://github.com/CorralNicolas/Data-Analyst-Project--Universidades" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
+          <h3 id="proj2Title" class="text-xl font-bold text-violet-300">Análisis de Universidades</h3>
+          <p id="proj2Desc" class="mt-2 text-slate-300">Uso de SQL y Power BI para análisis exploratorio y visualización interactiva de datos de universidades.</p>
+          <p id="proj2Tech" class="mt-2 text-sm text-slate-400">Tecnologías: SQL, Power BI, ETL, DAX</p>
+          <a id="proj2Link" href="https://github.com/CorralNicolas/Data-Analyst-Project--Universidades" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
         </div>
 
         <!-- Proyecto 3 -->
         <div class="card bg-[#1a1a2e] p-6 rounded-xl border border-violet-700">
-          <h3 class="text-xl font-bold text-violet-300">Predicción de Salarios con Machine Learning</h3>
-          <p class="mt-2 text-slate-300">Modelo de Machine Learning para predecir salarios en función de habilidades y experiencia, con análisis de características y visualizaciones.</p>
-          <p class="mt-2 text-sm text-slate-400">Tecnologías: Python, Scikit-learn, Pandas, Matplotlib</p>
-          <a href="https://github.com/CorralNicolas/Data-Scientist-Project--MachineLearning-PrediccionDeSalarios" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
+          <h3 id="proj3Title" class="text-xl font-bold text-violet-300">Predicción de Salarios con Machine Learning</h3>
+          <p id="proj3Desc" class="mt-2 text-slate-300">Modelo de Machine Learning para predecir salarios en función de habilidades y experiencia, con análisis de características y visualizaciones.</p>
+          <p id="proj3Tech" class="mt-2 text-sm text-slate-400">Tecnologías: Python, Scikit-learn, Pandas, Matplotlib</p>
+          <a id="proj3Link" href="https://github.com/CorralNicolas/Data-Scientist-Project--MachineLearning-PrediccionDeSalarios" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
         </div>
 
       </div>
@@ -87,18 +107,113 @@
 
     <!-- Contacto -->
     <section>
-      <h2 class="text-2xl font-semibold mb-6 section-header">Contacto</h2>
+      <h2 id="contactTitle" class="text-2xl font-semibold mb-6 section-header">Contacto</h2>
       <ul class="space-y-3 text-slate-300">
         <li><strong>Email:</strong> <a href="mailto:n.corral.j@gmail.com" class="text-violet-400 hover:underline">n.corral.j@gmail.com</a></li>
-        <li><strong>Teléfono:</strong> <a href="tel:+5491122882344" class="text-violet-400 hover:underline">+54 9 11 2288 2344</a></li>
+        <li><strong id="phoneLabel">Teléfono:</strong> <a href="tel:+5491122882344" class="text-violet-400 hover:underline">+54 9 11 2288 2344</a></li>
         <li><strong>GitHub:</strong> <a href="https://github.com/CorralNicolas" target="_blank" class="text-violet-400 hover:underline">github.com/CorralNicolas</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nicolas-corral-281209212" target="_blank" class="text-violet-400 hover:underline">linkedin.com/in/nicolas-corral</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nicolas-corral" target="_blank" class="text-violet-400 hover:underline">linkedin.com/in/nicolas-corral</a></li>
       </ul>
     </section>
 
-    <footer class="text-center text-xs text-slate-500 mt-12">
+    <footer id="footerText" class="text-center text-xs text-slate-500 mt-12">
       © 2025 Nicolás Corral — Portfolio Personal
     </footer>
   </main>
+
+  <!-- Script para cambiar idioma -->
+  <script>
+    const translations = {
+      en: {
+        subtitle: "Data Analyst | Data Scientist | Python | Power BI | AI | SQL | Automation",
+        cvText: "Download CV",
+        projectsTitle: "Featured Projects",
+        proj1Title: "Invoice Automation",
+        proj1Desc: "Process automation with Power Automate, PDF generation, folder upload, and email sending.",
+        proj1Tech: "Technologies: Power Automate, Python, Outlook, Excel",
+        proj1Link: "View on GitHub →",
+        proj2Title: "University Analysis",
+        proj2Desc: "Use of SQL and Power BI for exploratory analysis and interactive data visualization of universities.",
+        proj2Tech: "Technologies: SQL, Power BI, ETL, DAX",
+        proj2Link: "View on GitHub →",
+        proj3Title: "Salary Prediction with Machine Learning",
+        proj3Desc: "Machine Learning model to predict salaries based on skills and experience, with feature analysis and visualizations.",
+        proj3Tech: "Technologies: Python, Scikit-learn, Pandas, Matplotlib",
+        proj3Link: "View on GitHub →",
+        contactTitle: "Contact",
+        phoneLabel: "Phone:",
+        footerText: "© 2025 Nicolás Corral — Personal Portfolio"
+      },
+      es: {
+        subtitle: "Data Analyst | Data Scientist | Python | Power BI | AI | SQL | Automatización",
+        cvText: "Descargar CV",
+        projectsTitle: "Proyectos destacados",
+        proj1Title: "Automatización de Facturas",
+        proj1Desc: "Automatización de procesos con Power Automate, generación de PDFs, carga en carpetas y envío por correo.",
+        proj1Tech: "Tecnologías: Power Automate, Python, Outlook, Excel",
+        proj1Link: "Ver en GitHub →",
+        proj2Title: "Análisis de Universidades",
+        proj2Desc: "Uso de SQL y Power BI para análisis exploratorio y visualización interactiva de datos de universidades.",
+        proj2Tech: "Tecnologías: SQL, Power BI, ETL, DAX",
+        proj2Link: "Ver en GitHub →",
+        proj3Title: "Predicción de Salarios con Machine Learning",
+        proj3Desc: "Modelo de Machine Learning para predecir salarios en función de habilidades y experiencia, con análisis de características y visualizaciones.",
+        proj3Tech: "Tecnologías: Python, Scikit-learn, Pandas, Matplotlib",
+        proj3Link: "Ver en GitHub →",
+        contactTitle: "Contacto",
+        phoneLabel: "Teléfono:",
+        footerText: "© 2025 Nicolás Corral — Portfolio Personal"
+      }
+    };
+
+    let currentLang = "es";
+    const langBtn = document.getElementById("langToggle");
+    const elements = {
+      subtitle: document.getElementById("subtitle"),
+      cvLink: document.getElementById("cvLink"),
+      projectsTitle: document.getElementById("projectsTitle"),
+      proj1Title: document.getElementById("proj1Title"),
+      proj1Desc: document.getElementById("proj1Desc"),
+      proj1Tech: document.getElementById("proj1Tech"),
+      proj1Link: document.getElementById("proj1Link"),
+      proj2Title: document.getElementById("proj2Title"),
+      proj2Desc: document.getElementById("proj2Desc"),
+      proj2Tech: document.getElementById("proj2Tech"),
+      proj2Link: document.getElementById("proj2Link"),
+      proj3Title: document.getElementById("proj3Title"),
+      proj3Desc: document.getElementById("proj3Desc"),
+      proj3Tech: document.getElementById("proj3Tech"),
+      proj3Link: document.getElementById("proj3Link"),
+      contactTitle: document.getElementById("contactTitle"),
+      phoneLabel: document.getElementById("phoneLabel"),
+      footerText: document.getElementById("footerText")
+    };
+
+    langBtn.addEventListener("click", () => {
+      currentLang = currentLang === "es" ? "en" : "es";
+      const t = translations[currentLang];
+      elements.subtitle.innerText = t.subtitle;
+      elements.cvLink.innerText = t.cvText;
+      elements.cvLink.href = currentLang === "es" ? "CvNicolasCorral.pdf" : "CvNicolasCorralEnglish.pdf";
+      elements.projectsTitle.innerText = t.projectsTitle;
+      elements.proj1Title.innerText = t.proj1Title;
+      elements.proj1Desc.innerText = t.proj1Desc;
+      elements.proj1Tech.innerText = t.proj1Tech;
+      elements.proj1Link.innerText = t.proj1Link;
+      elements.proj2Title.innerText = t.proj2Title;
+      elements.proj2Desc.innerText = t.proj2Desc;
+      elements.proj2Tech.innerText = t.proj2Tech;
+      elements.proj2Link.innerText = t.proj2Link;
+      elements.proj3Title.innerText = t.proj3Title;
+      elements.proj3Desc.innerText = t.proj3Desc;
+      elements.proj3Tech.innerText = t.proj3Tech;
+      elements.proj3Link.innerText = t.proj3Link;
+      elements.contactTitle.innerText = t.contactTitle;
+      elements.phoneLabel.innerText = t.phoneLabel;
+      elements.footerText.innerText = t.footerText;
+      langBtn.innerText = currentLang === "es" ? "English" : "Español";
+    });
+  </script>
+
 </body>
 </html>
