@@ -3,314 +3,83 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portafolio — Tu Nombre</title>
-  <meta name="description" content="Portafolio profesional de datos. Proyectos: limpieza de datos, tablero Power BI, Power Automate. CV y contactos." />
-  <!-- Tailwind CDN (JIT) -->
+  <title>Portafolio — Nicolás Corral</title>
+  <meta name="description" content="Portafolio profesional de Nicolás Corral: automatización de facturas, análisis de universidades, visualizaciones con Power BI y más." />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Animaciones custom */
-    .reveal { opacity: 0; transform: translateY(20px); transition: all 600ms cubic-bezier(.2,.9,.2,1); }
-    .reveal.revealed { opacity: 1; transform: translateY(0); }
-    .card-anim { transition: transform 350ms ease, box-shadow 350ms ease; }
-    .card-anim:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 20px 40px rgba(16,24,40,0.12); }
-    /* Simple badge */
-    .badge { background: linear-gradient(90deg,#06b6d4,#3b82f6); -webkit-background-clip: text; color: transparent; font-weight:700 }
+    body {
+      background: #0f0f1a;
+      color: #f1f1f1;
+    }
+    .glow-line {
+      background: linear-gradient(90deg, #7c3aed, #9333ea);
+      height: 2px;
+    }
+    .card {
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased leading-relaxed">
-  <header class="max-w-5xl mx-auto p-6 flex items-center justify-between">
-    <div>
-      <h1 class="text-2xl font-extrabold">Tu Nombre <span class="text-slate-500 font-medium text-base block">Data Scientist & Data Enthusiast</span></h1>
-    </div>
-    <nav class="space-x-4 hidden md:block">
-      <a href="#proyectos" class="text-slate-600 hover:text-slate-900">Proyectos</a>
-      <a href="#cv" class="text-slate-600 hover:text-slate-900">CV</a>
-      <a href="#contacto" class="text-slate-600 hover:text-slate-900">Contacto</a>
-      <a href="#comentarios" class="text-slate-600 hover:text-slate-900">Comentarios</a>
-    </nav>
-  </header>
-
-  <main class="max-w-5xl mx-auto px-6 pb-20">
-    <!-- Hero -->
-    <section class="bg-white rounded-2xl p-8 shadow-sm reveal" id="hero">
-      <div class="md:flex md:items-center md:justify-between">
-        <div>
-          <p class="badge">Portafolio de datos</p>
-          <h2 class="mt-3 text-3xl font-bold">Hola — Soy <span class="text-slate-700">Tu Nombre</span></h2>
-          <p class="mt-4 text-slate-600 max-w-xl">Especializado en limpieza de datos, visualizaciones interactivas (Power BI) y automatizaciones con Power Automate. Aquí muestro algunos proyectos relevantes y mi CV.</p>
-          <div class="mt-6 flex gap-3">
-            <a class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 text-white rounded-lg" href="#proyectos">Ver proyectos</a>
-            <a class="inline-flex items-center gap-2 px-4 py-2 border rounded-lg text-slate-700" id="btn-github" href="https://github.com/tu-usuario" target="_blank">Ver mi GitHub</a>
-          </div>
-        </div>
-        <div class="mt-6 md:mt-0 flex items-center justify-center">
-          <div class="w-44 h-44 bg-gradient-to-br from-slate-100 to-white rounded-xl flex items-center justify-center shadow-lg">
-            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M3 12h18" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M3 6h18" stroke="#475569" stroke-width="1" stroke-linecap="round"/>
-              <path d="M3 18h18" stroke="#94a3b8" stroke-width="1" stroke-linecap="round"/>
-            </svg>
-          </div>
+<body class="font-sans">
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    <!-- Presentación -->
+    <section class="flex flex-col md:flex-row items-center gap-8">
+      <img src="Imagen-fotor-bg-remover-20250807233315.png" alt="Nicolás Corral" class="w-40 h-40 rounded-full object-cover border-4 border-violet-600">
+      <div>
+        <h1 class="text-3xl font-bold">Nicolás Corral</h1>
+        <p class="text-violet-400 mt-2">Analista de Datos | Ciencia de Datos | Power BI | Automatización</p>
+        <div class="mt-4">
+          <a href="Cv Nicolas Javier Corral.pdf" download class="inline-block px-4 py-2 border border-violet-500 rounded hover:bg-violet-600 hover:text-white transition">Descargar CV</a>
         </div>
       </div>
     </section>
+
+    <div class="glow-line"></div>
 
     <!-- Proyectos -->
-    <section id="proyectos" class="mt-10">
-      <h3 class="text-xl font-semibold mb-4">Proyectos destacados</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Project cards -->
-        <article class="bg-white rounded-xl p-5 shadow-sm reveal card-anim">
-          <h4 class="font-semibold">Limpieza de datos</h4>
-          <p class="mt-2 text-sm text-slate-600">Pipeline de limpieza y transformación (Pandas). Notebook con explicación y tests.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <a href="https://github.com/tu-usuario/limpieza-datos" target="_blank" class="text-sm font-medium">Ver en GitHub →</a>
-            <span class="text-xs px-2 py-1 rounded-md bg-slate-100">Python</span>
-          </div>
-        </article>
-
-        <article class="bg-white rounded-xl p-5 shadow-sm reveal card-anim">
-          <h4 class="font-semibold">Tablero Power BI</h4>
-          <p class="mt-2 text-sm text-slate-600">Dashboard interactivo con KPIs, filtros y análisis por cohortes. Embedded preview opcional.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <a href="https://github.com/tu-usuario/powerbi-dashboard" target="_blank" class="text-sm font-medium">Ver en GitHub →</a>
-            <span class="text-xs px-2 py-1 rounded-md bg-slate-100">Power BI</span>
-          </div>
-        </article>
-
-        <article class="bg-white rounded-xl p-5 shadow-sm reveal card-anim">
-          <h4 class="font-semibold">Power Automate</h4>
-          <p class="mt-2 text-sm text-slate-600">Automatización de procesos administrativos y extracción de datos.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <a href="https://github.com/tu-usuario/power-automate" target="_blank" class="text-sm font-medium">Ver en GitHub →</a>
-            <span class="text-xs px-2 py-1 rounded-md bg-slate-100">Automate</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CV -->
-    <section id="cv" class="mt-12 bg-white p-6 rounded-2xl shadow-sm reveal">
-      <h3 class="text-xl font-semibold">Currículum</h3>
-      <p class="text-slate-600 mt-2">Sube tu CV (PDF). Quedará guardado localmente en este navegador para que puedas descargarlo o compartir el enlace más tarde.</p>
-      <div class="mt-4 flex items-center gap-3">
-        <input id="cvInput" type="file" accept="application/pdf" class="hidden" />
-        <button id="uploadBtn" class="px-4 py-2 border rounded-lg">Subir CV</button>
-        <a id="cvLink" class="text-sm text-slate-700 hidden" href="#" download>Descargar CV actual</a>
-        <span id="cvName" class="text-sm text-slate-500"></span>
-      </div>
-    </section>
-
-    <!-- Comentarios -->
-    <section id="comentarios" class="mt-12">
-      <h3 class="text-xl font-semibold mb-4">Comentarios</h3>
+    <section>
+      <h2 class="text-2xl font-semibold mb-6">Proyectos destacados</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white p-5 rounded-xl shadow-sm reveal">
-          <p class="text-slate-600">Aquí los visitantes pueden dejar un comentario. Tú decides cuáles publicar (moderación manual).</p>
-          <form id="commentForm" class="mt-4 space-y-3">
-            <input id="visitorName" type="text" placeholder="Nombre" class="w-full border rounded px-3 py-2" required />
-            <textarea id="visitorText" rows="4" placeholder="Comentario" class="w-full border rounded px-3 py-2" required></textarea>
-            <div class="flex items-center gap-2">
-              <button type="submit" class="px-4 py-2 bg-slate-800 text-white rounded">Enviar (pendiente)</button>
-              <button type="button" id="openModerator" class="px-3 py-2 border rounded">Moderador</button>
-            </div>
-            <p class="text-xs text-slate-500">Los comentarios quedan en 'pendiente' hasta que los apruebes ingresando la contraseña de moderador.</p>
-          </form>
+        <div class="card bg-[#1a1a2e] p-6 rounded-xl border border-violet-700">
+          <h3 class="text-xl font-bold text-violet-300">Automatización de Facturas</h3>
+          <p class="mt-2 text-slate-300">Automatización de procesos con Power Automate, generación de PDFs, carga en carpetas y envío por correo.</p>
+          <p class="mt-2 text-sm text-slate-400">Tecnologías: Power Automate, Python, Outlook, Excel</p>
+          <a href="https://github.com/CorralNicolas/Data-Scientist-Project--Automatizacion-De-Facturas" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
         </div>
 
-        <div class="bg-white p-5 rounded-xl shadow-sm reveal">
-          <h4 class="font-medium">Comentarios publicados</h4>
-          <ul id="approvedList" class="mt-3 space-y-3"></ul>
-        </div>
-      </div>
-
-      <!-- Moderation drawer (hidden) -->
-      <div id="moderation" class="fixed right-6 bottom-6 w-96 bg-white rounded-xl shadow-lg p-4 hidden">
-        <div class="flex items-center justify-between">
-          <h4 class="font-semibold">Panel de moderación</h4>
-          <button id="closeMod" class="text-slate-500">Cerrar</button>
-        </div>
-        <div class="mt-3">
-          <label class="text-xs text-slate-500">Contraseña de moderador</label>
-          <input id="modPass" type="password" class="w-full border rounded px-2 py-2 mt-1" placeholder="Ingresa la contraseña" />
-        </div>
-        <div class="mt-3">
-          <h5 class="text-sm font-medium">Comentarios pendientes</h5>
-          <ul id="pendingList" class="mt-2 space-y-2 max-h-48 overflow-auto"></ul>
+        <div class="card bg-[#1a1a2e] p-6 rounded-xl border border-violet-700">
+          <h3 class="text-xl font-bold text-violet-300">Análisis de Universidades</h3>
+          <p class="mt-2 text-slate-300">Uso de SQL y Power BI para análisis exploratorio y visualización interactiva de datos de universidades.</p>
+          <p class="mt-2 text-sm text-slate-400">Tecnologías: SQL, Power BI, ETL, DAX</p>
+          <a href="https://github.com/CorralNicolas/Data-Analyst-Project--Universidades" target="_blank" class="inline-block mt-3 text-violet-400 hover:underline">Ver en GitHub →</a>
         </div>
       </div>
     </section>
 
-    <!-- Contacto y Settings -->
-    <section id="contacto" class="mt-12 bg-white p-6 rounded-2xl shadow-sm reveal">
-      <div class="md:flex md:items-start md:justify-between">
-        <div>
-          <h3 class="text-xl font-semibold">Contacto</h3>
-          <p class="text-slate-600 mt-2">Email, LinkedIn y teléfono. Edita los datos en 'Ajustes' (sólo en tu navegador).</p>
-          <ul class="mt-4 space-y-2 text-slate-700">
-            <li><strong>Email:</strong> <span id="contactEmail">tu.email@ejemplo.com</span></li>
-            <li><strong>LinkedIn:</strong> <a id="contactLinkedin" href="https://linkedin.com/in/tu-usuario" target="_blank">linkedin.com/in/tu-usuario</a></li>
-            <li><strong>Teléfono:</strong> <span id="contactPhone">+54 9 11 0000-0000</span></li>
-          </ul>
-        </div>
-        <div class="mt-6 md:mt-0">
-          <h4 class="text-sm font-medium">Ajustes rápidos</h4>
-          <div class="mt-3 space-y-2">
-            <input id="emailInput" placeholder="Email" class="w-full border rounded px-2 py-2" />
-            <input id="linkedinInput" placeholder="LinkedIn URL" class="w-full border rounded px-2 py-2" />
-            <input id="phoneInput" placeholder="Teléfono" class="w-full border rounded px-2 py-2" />
-            <button id="saveContacts" class="w-full px-4 py-2 bg-slate-800 text-white rounded">Guardar</button>
-          </div>
-        </div>
-      </div>
+    <div class="glow-line"></div>
+
+    <!-- Contacto -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-6">Contacto</h2>
+      <ul class="space-y-3 text-slate-300">
+        <li><strong>Email:</strong> <a href="mailto:n.corral.j@gmail.com" class="text-violet-400 hover:underline">n.corral.j@gmail.com</a></li>
+        <li><strong>Teléfono:</strong> <a href="tel:+5491122882344" class="text-violet-400 hover:underline">+54 9 11 2288 2344</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/CorralNicolas" target="_blank" class="text-violet-400 hover:underline">github.com/CorralNicolas</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nicolas-corral" target="_blank" class="text-violet-400 hover:underline">linkedin.com/in/nicolas-corral</a></li>
+      </ul>
     </section>
 
-    <footer class="mt-12 text-center text-sm text-slate-500">
-      Hecho con ❤️ — Portafolio de datos. Guarda este archivo como <code>index.html</code> y súbelo a GitHub Pages.
+    <footer class="text-center text-xs text-slate-500 mt-12">
+      © 2025 Nicolás Corral — Portfolio Personal
     </footer>
   </main>
+</body>
+</html>
 
-<script>
-  // Simple reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('revealed');
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(r => io.observe(r));
-
-  // LocalStorage keys
-  const COMMENTS_KEY = 'portfolio_comments_v1';
-  const CV_KEY = 'portfolio_cv_v1';
-  const CONTACT_KEY = 'portfolio_contact_v1';
-
-  // Comments system
-  function loadComments() {
-    const raw = localStorage.getItem(COMMENTS_KEY) || '[]';
-    try { return JSON.parse(raw); } catch(e){ return []; }
-  }
-  function saveComments(list) { localStorage.setItem(COMMENTS_KEY, JSON.stringify(list)); }
-
-  function renderApproved() {
-    const list = loadComments().filter(c => c.approved);
-    const ul = document.getElementById('approvedList'); ul.innerHTML = '';
-    if (!list.length) { ul.innerHTML = '<li class="text-slate-500">Aún no hay comentarios publicados.</li>'; return; }
-    list.forEach(c => {
-      const li = document.createElement('li');
-      li.className = 'p-3 bg-slate-50 border rounded';
-      li.innerHTML = `<strong>${escapeHtml(c.name)}</strong><p class="text-sm text-slate-600 mt-1">${escapeHtml(c.text)}</p>`;
-      ul.appendChild(li);
-    });
-  }
-
-  function renderPending() {
-    const mod = document.getElementById('pendingList'); mod.innerHTML = '';
-    const list = loadComments().filter(c => !c.approved);
-    if (!list.length) { mod.innerHTML = '<li class="text-slate-500">No hay pendientes.</li>'; return; }
-    list.forEach((c, idx) => {
-      const li = document.createElement('li');
-      li.className = 'p-2 border rounded bg-slate-50';
-      li.innerHTML = `<div class=\"flex justify-between items-start\"><div><strong>${escapeHtml(c.name)}</strong><p class=\"text-sm text-slate-600\">${escapeHtml(c.text)}</p></div><div class=\"flex gap-2 ml-3\"><button data-idx=\"${idx}\" class=\"approveBtn px-2 py-1 bg-green-600 text-white rounded text-xs\">Aprobar</button><button data-idx=\"${idx}\" class=\"deleteBtn px-2 py-1 bg-red-600 text-white rounded text-xs\">Borrar</button></div></div>`;
-      mod.appendChild(li);
-    });
-    // attach events
-    [...mod.querySelectorAll('.approveBtn')].forEach(b => b.onclick = () => { changePending(b.dataset.idx, true); });
-    [...mod.querySelectorAll('.deleteBtn')].forEach(b => b.onclick = () => { changePending(b.dataset.idx, false); });
-  }
-
-  function changePending(idx, approve) {
-    const all = loadComments();
-    // map pending index to actual index in array
-    const pendingIdxs = all.map((c,i) => ({c,i})).filter(x => !x.c.approved).map(x => x.i);
-    const actual = pendingIdxs[Number(idx)];
-    if (actual === undefined) return;
-    if (approve) all[actual].approved = true; else all.splice(actual,1);
-    saveComments(all); renderPending(); renderApproved();
-  }
-
-  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]; }); }
-
-  document.getElementById('commentForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('visitorName').value.trim();
-    const text = document.getElementById('visitorText').value.trim();
-    if (!name || !text) return;
-    const all = loadComments();
-    all.push({ name, text, approved: false, created: new Date().toISOString() });
-    saveComments(all);
-    alert('Gracias — tu comentario fue enviado y está pendiente de moderación.');
-    e.target.reset(); renderPending();
-  });
-
-  // Moderator drawer
-  const MOD_PASSWORD = 'mi-contraseña-moderador'; // Cambia esta contraseña a algo propio DESDE EL HTML o en el navegador
-  document.getElementById('openModerator').addEventListener('click', () => {
-    document.getElementById('moderation').classList.remove('hidden');
-    renderPending();
-  });
-  document.getElementById('closeMod').addEventListener('click', () => document.getElementById('moderation').classList.add('hidden'));
-  document.getElementById('modPass').addEventListener('input', (e) => {
-    const ok = e.target.value === MOD_PASSWORD;
-    const panel = document.getElementById('moderation');
-    if (ok) {
-      panel.querySelectorAll('button').forEach(b => b.disabled = false);
-      renderPending();
-    } else {
-      // hide action buttons if wrong
-      panel.querySelectorAll('.approveBtn, .deleteBtn').forEach(b => b.disabled = true);
-    }
-  });
-
-  // CV upload and storage (local)
-  const cvInput = document.getElementById('cvInput');
-  const uploadBtn = document.getElementById('uploadBtn');
-  const cvLink = document.getElementById('cvLink');
-  const cvName = document.getElementById('cvName');
-
-  uploadBtn.addEventListener('click', () => cvInput.click());
-  cvInput.addEventListener('change', async (e) => {
-    const file = e.target.files[0]; if (!file) return;
-    if (file.type !== 'application/pdf') { alert('Por favor sube un PDF.'); return; }
-    const fr = new FileReader();
-    fr.onload = () => {
-      localStorage.setItem(CV_KEY, JSON.stringify({ name: file.name, data: fr.result }));
-      loadCV();
-      alert('CV guardado localmente en este navegador.');
-    };
-    fr.readAsDataURL(file);
-  });
-
-  function loadCV(){
-    const raw = localStorage.getItem(CV_KEY);
-    if (!raw) { cvLink.classList.add('hidden'); cvName.textContent = '' ; return; }
-    try {
-      const obj = JSON.parse(raw);
-      cvLink.href = obj.data; cvLink.download = obj.name; cvLink.classList.remove('hidden'); cvName.textContent = obj.name;
-    } catch(e){ cvLink.classList.add('hidden'); cvName.textContent = ''; }
-  }
-
-  // Contact settings
-  document.getElementById('saveContacts').addEventListener('click', () => {
-    const obj = { email: document.getElementById('emailInput').value.trim(), linkedin: document.getElementById('linkedinInput').value.trim(), phone: document.getElementById('phoneInput').value.trim() };
-    localStorage.setItem(CONTACT_KEY, JSON.stringify(obj)); loadContacts(); alert('Contactos guardados localmente.');
-  });
-  function loadContacts(){
-    const raw = localStorage.getItem(CONTACT_KEY);
-    if (!raw) return;
-    try {
-      const obj = JSON.parse(raw);
-      if (obj.email) document.getElementById('contactEmail').textContent = obj.email;
-      if (obj.linkedin) document.getElementById('contactLinkedin').href = obj.linkedin; document.getElementById('contactLinkedin').textContent = obj.linkedin;
-      if (obj.phone) document.getElementById('contactPhone').textContent = obj.phone;
-    } catch(e){}
-  }
-
-  // Initialize
-  renderApproved(); renderPending(); loadCV(); loadContacts();
-
-  // Small UX: set GitHub link placeholder
-  document.getElementById('btn-github').href = 'https://github.com/tu-usuario';
 
   // Nota: este portfolio funciona completamente en el navegador (static). Si quieres que los comentarios sean aprobados por ti desde cualquier lugar, necesitarás un backend.
 </script>
